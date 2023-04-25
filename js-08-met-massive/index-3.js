@@ -162,8 +162,13 @@ const numbers = [1, 2, 3, 3, 2, 1, 4, 5, 6, 4];
 // el = 2; idx = 4;
 // 1 === 4
 
-const filteredNumbers = numbers.filter(
-  (number, index, array) => array.indexOf(number) === index
-);
+// const filteredNumbers = numbers.filter((number, index, array) => array.indexOf(number) === index);
 
-console.log(filteredNumbers);
+// console.log(filteredNumbers);
+
+function domainName(url) {
+  //your code here
+}
+
+console.log(domainName('http://google.co.jp'));
+// 'www.xakep.ru';

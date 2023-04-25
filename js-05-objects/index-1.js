@@ -11,10 +11,10 @@ const film = {
   rating: 4,
   actors: ['Aiden', 'Mason', 'Jimmy'],
   isAdult: true,
-  // location: {
-  // country: 'Jamaica',
-  // city: 'Ocho Rios',
-  // },
+  location: {
+    country: 'Jamaica',
+    city: 'Ocho Rios',
+  },
 };
 
 // film.rating = 5;
@@ -99,15 +99,15 @@ const obj = {
 
 const obj2 = obj;
 
-console.log('obj: ', obj);
-console.log('obj2: ', obj2);
-console.log(obj === obj2);
+// console.log('obj: ', obj);
+// console.log('obj2: ', obj2);
+// console.log(obj === obj2);
 
-obj2.c = 5;
+// obj2.c = 5;
 
-console.log('obj: ', obj);
-console.log('obj2: ', obj2);
-console.log(obj === obj2);
+// console.log('obj: ', obj);
+// console.log('obj2: ', obj2);
+// console.log(obj === obj2);
 
 const courses = [
   'js',
