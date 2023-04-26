@@ -6,7 +6,6 @@
  */
 
 // https://learn.javascript.ru/article/native-prototypes/native-prototypes-classes.svg
-
 // прототип - це резервне сховище властивостей і методів об'єкта
 
 //* Власні та не власні властивості об'єкта
@@ -16,7 +15,7 @@ const user = {
   name: 'Mango',
   age: 21,
 };
-//при створенні об'єкта визивається new Object іна прототипі буде Object.prototype
+//при створенні об'єкта визивається new Object і на прототипі буде Object.prototype
 
 const userDeveloper = Object.create(user);
 //на прототипі буде об'єкт user
@@ -24,10 +23,10 @@ const userDeveloper = Object.create(user);
 user.email = 'mango@gmail.com';
 
 userDeveloper.skill = 'react';
-// userDeveloper.age = 27;
+userDeveloper.age = 27;
 
-// console.log(userDeveloper.__proto__);
-
+console.log('user', user);
+console.log(userDeveloper.__proto__);
 // console.log('user is prototype', user.isPrototypeOf(userDeveloper));
 
 //* Перевірка приватних властивостей obj.hasOwnProperty()
