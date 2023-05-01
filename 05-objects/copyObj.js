@@ -24,19 +24,18 @@ const film = {
     mai: 182,
     june: 50,
   },
-  getTitle() {
-    return this.title;
-  },
+  // getTitle() {
+  //   return this.title;
+  // },
 };
 
 const newFilm = Object.assign({}, film);
-
 const newFilm2 = _.cloneDeep(film);
+const newFilm3 = structuredClone(film);
+const newFilm4 = JSON.parse(JSON.stringify(film));
 
-console.log(newFilm);
+// console.log(newFilm);
 console.log(film.salesplan === newFilm.salesplan); //true
 console.log(film.salesplan === newFilm2.salesplan); //false
-
-const copyFilm = JSON.parse(JSON.stringify(film));
-
-console.log(copyFilm);
+console.log(film.salesplan === newFilm3.salesplan); //false
+// console.log(newFilm3);
