@@ -1,9 +1,62 @@
-.d-grid{
-  display: grid;
-  grid-template-columns: 150px 100px 150px;
-  grid-template-rows: 100px 200px 100px;
+.d-inl-grid {
+  display: inline-grid;
+  grid-template-columns: 300px 150px 300px 100px;
+  grid-template-rows: 100px 200px 300px;
 }
 
-.d-inl-grid{
-  display: inline-grid;
+.d-grid {
+  display: grid;
+  /* grid-template-rows: 100px 200px 300px; */
+}
+
+.four-fixed-px-colums {
+  grid-template-columns: 300px 150px 300px 100px;
+}
+
+.six-fixed-px-colums {
+  grid-template-columns: 40px 50px 30px 50px 60px 50px;
+}
+
+.two-fixed-em-colums {
+  grid-template-columns: 20em 300px;
+}
+
+.six-fixed-rem-colums {
+  grid-template-columns: 5rem 8rem 2rem 4rem 6rem 5rem;
+}
+
+/* html {
+  font-size: 14px;
+} */
+
+.five-vmin-vmax-colums{
+  grid-template-columns: 5vmin 5vmin 20vmax 5vmin 5vmin;
+}
+
+.four-vw-colums {
+  grid-template-columns: 5vw 10vw 5vw 10vw;
+}
+
+.two-colums-mix {
+  grid-template-columns: 50px 100%;
+}
+
+.auto-colums {
+  grid-template-columns: 50px auto auto auto;
+}
+
+.fr-colums {
+  grid-template-columns: 3fr 1fr;
+}
+
+.gap-grid {
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  /* gap: 30px 10px; */
+  column-gap: 40px;
+  row-gap: 5px;
+}
+
+.five-auto-colums {
+  grid-template-columns: auto auto auto auto auto;
 }
