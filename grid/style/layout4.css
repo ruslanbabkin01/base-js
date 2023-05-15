@@ -1,0 +1,106 @@
+.d-grid {
+  display: grid;
+}
+
+.template-grid {
+  /* grid-template-columns: repeat(2, 1fr 2fr);
+  grid-template-rows: repeat(3, 100px) */
+
+  /* grid-template: repeat(3, 100px)/repeat(2, 1fr 2fr); */
+
+  grid-template: [rowStart]repeat(3, 100px)[rowEnd]/[colStart]repeat(2, 1fr 2fr)[colEnd];
+}
+.template-grid div:nth-child(1){
+  grid-column: colStart/colEnd;
+}
+
+/* Area */
+.grid-areas{
+  grid-template: repeat(3, 100px)/1fr 2fr;
+  grid-template-areas: 
+  "header header"
+  "content content"
+  "left-side right-side"
+  "article article"
+  "footer footer";
+}
+.grid-areas div:nth-child(1){
+  grid-area: header ;
+}
+.grid-areas div:nth-child(2) {
+  grid-area: content;
+}
+.grid-areas div:nth-child(3) {
+  grid-area: left-side;
+}
+.grid-areas div:nth-child(4) {
+  grid-area: right-side;
+}
+.grid-areas div:nth-child(5) {
+  /* grid-area: article; */
+  grid-area: footer;
+}
+.grid-areas div:nth-child(6) {
+  /* grid-area: footer; */
+  grid-area: article;
+}
+
+.grid-more{
+  grid-template: 100px 100px/1fr 1fr;
+  grid-template-areas:
+      "logo header"
+      "logo main"
+      "logo .";
+}
+/* . - це пропуск */
+.grid-more div:nth-child(1) {
+  grid-area: logo;
+}
+.grid-more div:nth-child(2) {
+  grid-area: header;
+}
+.grid-more div:nth-child(3) {
+  grid-area: main;
+}
+/* .grid-more div:nth-child(4) {
+  grid-area: footer;
+} */
+
+.grid-justify{
+  grid-template: 1fr 1fr/1fr 1fr;
+  justify-items: center;
+}
+
+.grid-align {
+  grid-template: 100px 100px/100px 100px;
+  align-items: center;
+  justify-items: start;
+}
+.grid-hw {
+  grid-template: 1fr 1fr/1fr 1fr;
+  justify-items: center;
+  grid-template-areas:
+  "logo block"
+  "menu ."
+  "header ."
+  "content ."
+  "footer .";
+  }
+  .grid-hw div:nth-child(1) {
+    grid-area: logo;
+  }
+  .grid-hw div:nth-child(2) {
+    grid-area: block;
+  }
+  .grid-hw div:nth-child(3) {
+    grid-area: menu;
+  }
+  .grid-hw div:nth-child(4) {
+    grid-area: header;
+  }
+  .grid-hw div:nth-child(5) {
+    grid-area: content;
+  }
+  .grid-hw div:nth-child(6) {
+    grid-area: footer;
+  }
