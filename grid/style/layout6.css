@@ -1,0 +1,12 @@
+.d-grid {
+  display: grid;
+}
+
+/* justify-self+align-self = place-self
+align-items + justify-items = place-items */
+.align-self {
+  grid-template: repeat(3, 100px)/1fr 1fr;
+  /* align-items: start;
+  justify-items: center; */
+  place-items: start center;
+}

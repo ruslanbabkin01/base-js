@@ -1,0 +1,130 @@
+.d-grid {
+  display: grid;
+}
+
+/* justify-self+align-self = place-self
+align-items + justify-items = place-items */
+.align-self{
+  grid-template: repeat(3, 100px)/1fr 1fr;
+  /* align-items: start;
+  justify-items: center; */
+  place-items:  start center;
+}
+/* even - парні */
+.align-self div:nth-child(even){
+  /* justify-self: stretch;
+  align-self: stretch; */
+  place-self: stretch;
+}
+.align-self div:nth-child(1) {
+  align-self: start;
+}
+.align-self div:nth-child(3) {
+  justify-self: end;
+  align-self: center;
+  /* place-self: end center; */
+}
+.align-self div:nth-child(5) {
+  /* justify-self: start;
+  align-self: center; */
+  place-self: start center;
+}
+
+/* Place-content */
+.place-content{
+  height: 400px;
+  grid-template: 100px 100px 100px/100px 100px;
+  /* align-content: space-between;
+  justify-content: space-between; */
+  place-content: space-between space-between;
+}
+
+/* min-max */
+.min-max {
+  grid-template-columns: 1fr max-content 1fr;
+}
+
+/* Ordering */
+.order{
+grid-template: repeat(3, 100px)/1fr 1fr;
+}
+.order div:nth-child(1) {
+  order: 2;
+  grid-row: 1/span 1;
+}
+.order div:nth-child(2) {
+  order: 1;
+}
+.order div:nth-child(3) {
+  order: 0;
+}
+.order div:nth-child(4) {
+  order: -1;
+}
+.order div:nth-child(5) {
+  order: -2;
+}
+.order div:nth-child(6) {
+  order: -3;
+  grid-column: 1/span 2;
+}
+
+/* Position */
+.position {
+  grid-template: repeat(2, auto)/repeat(2, auto);
+  position: relative;
+}
+.position div:nth-child(1) {
+  position: absolute;
+  top:20px;
+  left: 0;
+  right: 0;
+  grid-column: 2/3;
+  /* grid-row: 2/3; */
+}
+
+/* Position-relative */
+.position-relative {
+  grid-template: repeat(2, 1fr 1fr)/ 1fr 300px;
+  position: relative;
+}
+.position-relative div:nth-child(2) {
+  position: relative;
+  top: 200%;
+  z-index: -6;
+  grid-column: 1/2;
+}
+
+/* Position-fixed */
+.position-fixed {
+  grid-template: auto auto/ 1fr 1fr;
+}
+.position-fixed div:nth-child(1) {
+  position: fixed;
+  top:0;
+}
+
+/* Example */
+.grid-container {
+  width: 100vh;
+  grid-template: 80px 1fr 80px/1fr;
+  grid-template-areas: 
+  "header"
+  "main"
+  "footer";
+}
+header{
+  grid-area: header;
+  position: sticky;
+  top: 0;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+  position: sticky;
+  bottom: 0;
+}
+
+
