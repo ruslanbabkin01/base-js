@@ -1,0 +1,45 @@
+.d-grid {
+  display: grid;
+}
+/* Implicit vs explicit grid */
+.imp-vs-ex {
+  grid-gap: 30px;
+  grid-template-columns: 100px;
+  grid-template-rows: 150px 100px;
+  grid-auto-columns: 100px;
+  grid-auto-rows: 200px 70px;
+}
+/* .imp-vs-ex div:nth-child(1){
+  grid-column-start: 3;
+  grid-column-end: 5;
+} */
+
+/* .imp-vs-ex div:nth-child(1) {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+} */
+
+/* auto-fill */
+.auto-fill{
+width: 90%;
+grid-template-columns: repeat(auto-fill, 200px);
+}
+
+/* Min-max */
+.min-max{
+  /* grid-template-columns: minmax(120px, auto) auto 70%; */
+  /* grid-template-columns: minmax(70px, 30%)  70%; */
+  grid-template-columns: minmax(70px, 30%) minmax(70px, 70%);
+}
+
+/* Auto-fit */
+.auto-fit{
+  grid-template-columns: repeat(auto-fit, minmax(120px, auto));
+}
+
+/* Grid auto flow - as flex-direction */
+.auto-flow{
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  grid-auto-flow: column;
+}
