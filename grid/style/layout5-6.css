@@ -2,8 +2,9 @@
   display: grid;
 }
 
-/* justify-self+align-self = place-self
-align-items + justify-items = place-items */
+/* justify-items + align-items = place-items - вирівнювання самого контейнера 
+justify-content + align-content = place-content - вирівнювання вмісту контейнера
+justify-self + align-self = place-self - вирівнювання елемента всередині контейнера */
 .align-self{
   grid-template: repeat(3, 100px)/1fr 1fr;
   /* align-items: start;
@@ -20,14 +21,14 @@ align-items + justify-items = place-items */
   align-self: start;
 }
 .align-self div:nth-child(3) {
-  justify-self: end;
-  align-self: center;
-  /* place-self: end center; */
+  /* justify-self: end;
+  align-self: center; */
+  place-self: end center;
 }
 .align-self div:nth-child(5) {
-  /* justify-self: start;
-  align-self: center; */
-  place-self: start center;
+  justify-self: start;
+  align-self: center;
+  /* place-self: start center; */
 }
 
 /* Place-content */
